@@ -24,3 +24,8 @@
 ## Kubernetes
 
 <!-- TODO: Document your process for deploying Navidrome on Kubernetes -->
+
+- There were a lot of random confusing errors due to previous deployments that I had forgotten to delete
+- Using kompose to conver docker-compose.yml to the kubernetes yaml files did not expose the port to localhost. To
+  resolve this, navidrome-service.yaml was edited to change the service type to NodePort
+  - For public routing I think using the LoadBalancer service would work?
